@@ -1,0 +1,19 @@
+<?php
+
+    include("conexao.php");
+
+    $nome=$_POST['nome'];
+    $setor=$_POST['setor'];
+    $funci=$_POST['matricula'];
+
+    $sql="INSERT INTO colaborador(nome,setor,matricula) VALUES ('$nome', '$setor', $matricula)";
+
+    if(mysqli_query($conexao, $sql)){
+        echo"Usuario cadastrado com sucesso";
+    }
+    else{
+        echo "Erro".mysqli_connect_error($conexao);
+    }
+
+    mysqli_close($conexao);
+?>

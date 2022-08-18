@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro do Ponto Eletrônico -  RCS SUBAQUÁTICA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/rcsicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <script>		
+        function relogio(){
+            var data=new Date();
+            var hor=data.getHours();
+            var min=data.getMinutes();
+            var seg=data.getSeconds();
+            
+            if(hor < 10){
+                hor="0"+hor;
+            }
+            if(min < 10){
+                min="0"+min;
+            }
+            if(seg < 10){
+                seg="0"+seg;
+            }
+            
+            var horas=hor + ":" + min + ":" + seg;
+            
+            document.getElementById("rel").value=horas;
+        }
+
+        var timer=setInterval(relogio,1000);
+
+
+        
+        </script>
+
+
+</head>
+<body>
+
+    <div class="logo">
+        <img src="imagens/logorcs.png" alt="">
+    </div>
+
+<div class="registro">    
+    <div class="data"> 
+            <script>
+            date = new Date().toLocaleDateString();
+            document.write(date);
+            </script>
+    </div>
+
+    <div class="relogio">
+        <input type="text" id="rel">      
+    </div>  
+
+    <div class="ponto">
+        <form action="" method="POST">
+            <input type="number" class="inp" name="matricula" placeholder="Matrícula" >            
+        </form>   
+    </div>
+
+    <div class="bt-ok">
+        <button name="button">Confirmar</button>
+    </div>
+</div>
+
+</body>
+</html>
+
