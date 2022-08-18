@@ -17,10 +17,11 @@ text-align: center;
 }
 .data{
     font-family: 'Kanit', sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     color: white;
-    
-    
+}
+.data h1{
+    font-weight: lighter;
 }
 .relogio input{
     border: none;
